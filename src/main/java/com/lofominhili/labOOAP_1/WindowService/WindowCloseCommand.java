@@ -1,8 +1,8 @@
 package com.lofominhili.labOOAP_1.WindowService;
 
 import com.lofominhili.labOOAP_1.Command;
-import com.lofominhili.labOOAP_1.Window;
 import com.lofominhili.labOOAP_1.State;
+import com.lofominhili.labOOAP_1.Window;
 
 public class WindowCloseCommand implements Command {
 
@@ -14,6 +14,7 @@ public class WindowCloseCommand implements Command {
     public WindowCloseCommand(Window window) {
         this.window = window;
     }
+
     @Override
     public void execute() {
         prevState = window.getState();
@@ -22,18 +23,18 @@ public class WindowCloseCommand implements Command {
 
     @Override
     public void undo() {
-        switch (prevState){
-            case OPEN:{
+        switch (prevState) {
+            case OPEN: {
                 undoState = prevState;
                 window.open();
                 break;
             }
-            case OPENONVENTILATION:{
+            case OPENONVENTILATION: {
                 undoState = prevState;
                 window.openOnVentilation();
                 break;
             }
-            case CLOSED:{
+            case CLOSED: {
                 undoState = prevState;
                 window.close();
                 break;
@@ -43,18 +44,18 @@ public class WindowCloseCommand implements Command {
 
     @Override
     public void redo() {
-        switch (undoState){
-            case OPEN:{
+        switch (undoState) {
+            case OPEN: {
                 prevState = undoState;
                 window.open();
                 break;
             }
-            case OPENONVENTILATION:{
+            case OPENONVENTILATION: {
                 prevState = undoState;
                 window.openOnVentilation();
                 break;
             }
-            case CLOSED:{
+            case CLOSED: {
                 prevState = undoState;
                 window.close();
                 break;

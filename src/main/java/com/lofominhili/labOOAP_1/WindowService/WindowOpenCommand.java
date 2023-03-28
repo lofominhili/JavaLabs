@@ -23,18 +23,18 @@ public class WindowOpenCommand implements Command {
 
     @Override
     public void undo() {
-        switch (prevState){
-            case OPEN:{
+        switch (prevState) {
+            case OPEN: {
                 undoState = prevState;
                 window.open();
                 break;
             }
-            case OPENONVENTILATION:{
+            case OPENONVENTILATION: {
                 undoState = prevState;
                 window.openOnVentilation();
                 break;
             }
-            case CLOSED:{
+            case CLOSED: {
                 undoState = prevState;
                 window.close();
                 break;
@@ -44,18 +44,18 @@ public class WindowOpenCommand implements Command {
 
     @Override
     public void redo() {
-        switch (undoState){
-            case OPEN:{
+        switch (undoState) {
+            case OPEN: {
                 prevState = undoState;
                 window.open();
                 break;
             }
-            case OPENONVENTILATION:{
+            case OPENONVENTILATION: {
                 prevState = undoState;
                 window.openOnVentilation();
                 break;
             }
-            case CLOSED:{
+            case CLOSED: {
                 prevState = undoState;
                 window.close();
                 break;
