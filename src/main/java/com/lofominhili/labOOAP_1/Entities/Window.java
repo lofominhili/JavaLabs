@@ -1,4 +1,6 @@
-package com.lofominhili.labOOAP_1;
+package com.lofominhili.labOOAP_1.Entities;
+
+import com.lofominhili.labOOAP_1.Entities.State;
 
 public class Window {
     private State state;

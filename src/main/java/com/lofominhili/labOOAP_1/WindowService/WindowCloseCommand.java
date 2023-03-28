@@ -1,8 +1,8 @@
 package com.lofominhili.labOOAP_1.WindowService;
 
-import com.lofominhili.labOOAP_1.Command;
-import com.lofominhili.labOOAP_1.State;
-import com.lofominhili.labOOAP_1.Window;
+import com.lofominhili.labOOAP_1.ConsoleResources.Command;
+import com.lofominhili.labOOAP_1.Entities.State;
+import com.lofominhili.labOOAP_1.Entities.Window;
 
 public class WindowCloseCommand implements Command {
 

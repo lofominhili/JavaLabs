@@ -1,4 +1,4 @@
-package com.lofominhili.labOOAP_1;
+package com.lofominhili.labOOAP_1.ConsoleResources;
 
 import java.util.ArrayList;
 

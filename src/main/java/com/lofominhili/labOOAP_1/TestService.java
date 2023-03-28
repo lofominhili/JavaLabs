@@ -1,5 +1,7 @@
 package com.lofominhili.labOOAP_1;
 
+import com.lofominhili.labOOAP_1.ConsoleResources.RemoteController;
+import com.lofominhili.labOOAP_1.Entities.Window;
 import com.lofominhili.labOOAP_1.WindowService.WindowCloseCommand;
 import com.lofominhili.labOOAP_1.WindowService.WindowOpenCommand;
 import com.lofominhili.labOOAP_1.WindowService.WindowOpenOnVentilationCommand;
